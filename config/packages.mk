@@ -47,3 +47,7 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync    
+
+#Include librsjni explicitly to workaround GMS issue
+PRODUCT_PACKAGES += \
+    librsjni
