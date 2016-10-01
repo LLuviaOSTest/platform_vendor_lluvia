@@ -48,6 +48,9 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
+# Don't compile SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true
+
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/dictionaries
 
