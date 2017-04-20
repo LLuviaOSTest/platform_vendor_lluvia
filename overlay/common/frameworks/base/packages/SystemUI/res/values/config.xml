@@ -25,4 +25,7 @@
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
 
+    <!-- Show full alarm info -->
+    <bool name="quick_settings_show_full_alarm">true</bool>
+
 </resources>
