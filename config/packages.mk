@@ -1,9 +1,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
-    Basic \
     CellBroadcastReceiver \
     Development \
-    LatinIME \
     Launcher3QuickStep
 
 # Extra tools
