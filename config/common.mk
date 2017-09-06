@@ -32,3 +32,6 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 include vendor/lluvia/config/packages.mk
+
+# Version
+include vendor/lluvia/config/version.mk
