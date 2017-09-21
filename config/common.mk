@@ -22,9 +22,9 @@ PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/lluvia/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Init file
-PRODUCT_COPY_FILES += \
-    vendor/lluvia/prebuilt/common/etc/init.local.rc:root/init.lluvia.rc
+# Copy all LLuvia specific init rc files
+$(foreach f,$(wildcard vendor/lluvia/prebuilt/common/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
