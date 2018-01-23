@@ -34,6 +34,10 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/lluvia/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # LatinIME gesture typing
 ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
