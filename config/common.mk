@@ -38,6 +38,10 @@ $(foreach f,$(wildcard vendor/lluvia/prebuilt/common/etc/init/*.rc),\
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.recorder.show_manufacturer_and_model=true
+
 # LatinIME gesture typing
 ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
