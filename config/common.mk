@@ -42,6 +42,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.recorder.show_manufacturer_and_model=true
 
+# exFAT tools
+PRODUCT_PACKAGES += \
+    fsck.exfat \
+    mkfs.exfat
+
 # LatinIME gesture typing
 ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
