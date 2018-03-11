@@ -26,4 +26,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.carrier=unknown \
     media.recorder.show_manufacturer_and_model=true \
     ro.storage_manager.enabled=true \
-    persist.sys.disable_rescue=true      
+    persist.sys.disable_rescue=true \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
