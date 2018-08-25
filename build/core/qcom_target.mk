@@ -1,5 +1,3 @@
-# Target-specific configuration
-
 # Bring in Qualcomm helper macros
 include vendor/lluvia/build/core/qcom_utils.mk
 
