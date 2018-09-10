@@ -26,6 +26,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# Bootanimation
+PRODUCT_COPY_FILES += vendor/lluvia/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/common
 
