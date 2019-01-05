@@ -44,6 +44,14 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lluvia/config/permissions/lluvia-power-whitelist.xml:system/etc/sysconfig/lluvia-power-whitelist.xml
 
+# Do not include art debug targets
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
