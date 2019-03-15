@@ -27,4 +27,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true \
     persist.sys.disable_rescue=true \
     persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
+    persist.sys.wfd.virtual=0 \
+    ro.opa.eligible_device=true
