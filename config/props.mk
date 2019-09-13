@@ -22,7 +22,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.build.selinux=1 \
     ro.carrier=unknown \
     media.recorder.show_manufacturer_and_model=true \
     ro.storage_manager.enabled=true \
