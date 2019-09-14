@@ -40,10 +40,6 @@ PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
-# Don't export PS1 in /system/etc/mkshrc.
-PRODUCT_COPY_FILES += \
-    vendor/lluvia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
-
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
