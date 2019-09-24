@@ -19,8 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
 PRODUCT_COPY_FILES += \
-    vendor/lluvia/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/lluvia/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/lluvia/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # Copy all LLuvia specific init rc files
 $(foreach f,$(wildcard vendor/lluvia/prebuilt/common/etc/init/*.rc),\
