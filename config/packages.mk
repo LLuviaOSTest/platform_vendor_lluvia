@@ -1,7 +1,5 @@
 # Required packages
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver \
-    Development \
     Launcher3QuickStep
 
 # Extra tools
