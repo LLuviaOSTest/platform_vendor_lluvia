@@ -8,6 +8,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# Include LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/yodita/overlay/dictionaries
+
+# Common overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/yodita/overlay/common
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -15,48 +21,13 @@ PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
     vendor/lluvia/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
-ifeq ($(AB_OTA_UPDATER),true)
-PRODUCT_COPY_FILES += \
-    vendor/lluvia/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/lluvia/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/lluvia/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
-endif
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    keyguard.no_require_sim=true \
-    dalvik.vm.debug.alloc=0 \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.error.receiver.system.apps=com.google.android.gms \
-    ro.setupwizard.enterprise_mode=1 \
-    ro.com.android.dataroaming=false \
-    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.com.android.dateformat=MM-dd-yyyy \
-    ro.build.selinux=1 \
-    ro.carrier=unknown
-
+# Init banner
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # Copy all LLuvia specific init rc files
 $(foreach f,$(wildcard vendor/lluvia/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
-
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-# Media
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    media.recorder.show_manufacturer_and_model=true
-
-# Storage manager
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.storage_manager.enabled=true
-
-# Disable Rescue Party
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.sys.disable_rescue=true
 
 # LatinIME gesture typing
 ifeq ($(TARGET_ARCH),arm64)

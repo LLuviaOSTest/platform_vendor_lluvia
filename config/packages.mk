@@ -3,6 +3,10 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # Extra tools
 PRODUCT_PACKAGES += \
     7z \
