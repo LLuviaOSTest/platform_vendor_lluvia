@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     Basic \
     CellBroadcastReceiver \
     Development \
-    LatinIME
+    LatinIME \
+    Launcher3QuickStep
 
 # Extra tools
 PRODUCT_PACKAGES += \
