@@ -5,7 +5,7 @@
 
 export C=/tmp/backupdir
 export S=/system
-export V=9.0
+export V=10
 export ADDOND_VERSION=1
 
 # Scripts in /system/addon.d expect to find backuptool.functions in /tmp
