@@ -40,17 +40,14 @@ PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
-# Power whitelist
+# Sysconfigs
 PRODUCT_COPY_FILES += \
     vendor/lluvia/config/permissions/lluvia-power-whitelist.xml:system/etc/sysconfig/lluvia-power-whitelist.xml
+    vendor/lluvia/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
-# Google permissions
+# Permissions
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
-
-# Fix Dialer
-PRODUCT_COPY_FILES +=  \
-    vendor/lluvia/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
