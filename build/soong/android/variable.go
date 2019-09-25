@@ -6,18 +6,18 @@ type Product_variables struct {
 	Bootloader_message_offset struct {
 		Cflags []string
 	}
-	Device_support_hwfde struct {
+	Should_skip_waiting_for_qsee struct {
+		Cflags []string
+	}
+	Supports_hw_fde struct {
 		Cflags []string
 		Header_libs []string
 		Shared_libs []string
 	}
-	Device_support_hwfde_perf struct {
+	Supports_hw_fde_perf struct {
 		Cflags []string
 	}
-	Device_support_legacy_hwfde struct {
-		Cflags []string
-	}
-	Should_skip_waiting_for_qsee struct {
+	Supports_legacy_hw_fde struct {
 		Cflags []string
 	}
 	Apply_msm8974_1440p_egl_workaround struct {
@@ -26,7 +26,6 @@ type Product_variables struct {
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
 	}
-
 	Needs_text_relocations struct {
 		Cppflags []string
 	}
@@ -65,9 +64,9 @@ type Product_variables struct {
 type ProductVariables struct {
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Bootloader_message_offset  *int `json:",omitempty"`
-	Device_support_hwfde  *bool `json:",omitempty"`
-	Device_support_hwfde_perf  *bool `json:",omitempty"`
-	Device_support_legacy_hwfde  *bool `json:",omitempty"`
+	Supports_hw_fde  *bool `json:",omitempty"`
+	Supports_hw_fde_perf  *bool `json:",omitempty"`
+	Supports_legacy_hw_fde  *bool `json:",omitempty"`
 	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
