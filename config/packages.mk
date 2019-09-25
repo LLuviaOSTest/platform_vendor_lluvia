@@ -1,6 +1,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
-    Launcher3QuickStep
+    Launcher3QuickStep \
+    messaging
 
 # Extra tools
 PRODUCT_PACKAGES += \
