@@ -85,6 +85,10 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
+
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/dictionaries
 
