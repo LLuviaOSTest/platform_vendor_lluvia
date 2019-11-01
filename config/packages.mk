@@ -62,3 +62,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
+
+# ThemePicker
+PRODUCT_PACKAGES += \
+   ThemePicker
