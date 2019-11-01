@@ -4,7 +4,7 @@ PRODUCT_PACKAGES += \
     GalleryGoPrebuilt \
     GoogleCalculator \
     GoogleCalendar \
-    GoogleDeskClock \            
+    GoogleDeskClock \
     LatinIMEGooglePrebuilt \
     Lawnchair \
     messaging \
@@ -65,4 +65,5 @@ PRODUCT_PACKAGES += \
 
 # ThemePicker
 PRODUCT_PACKAGES += \
-   ThemePicker
+	ThemePicker \
+	ThemesStub
