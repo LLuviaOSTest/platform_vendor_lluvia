@@ -1,8 +1,10 @@
 # Required packages
 PRODUCT_PACKAGES += \
     LatinIME \
+    LatinIMEGooglePrebuilt \
     Lawnchair \
-    messaging
+    messaging \
+    SoundPickerPrebuilt
 
 # Charger
 PRODUCT_PACKAGES += \
