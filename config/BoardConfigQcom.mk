@@ -1,19 +1,4 @@
-# Bring in Qualcomm helper macros
-include vendor/lluvia/build/core/qcom_utils.mk
-
-# Platform names
-MSMNILE := msmnile #SM8150
-MSMSTEPPE := sm6150
-TRINKET := trinket #SM6125
-
-B_FAMILY := msm8226 msm8610 msm8974
-B64_FAMILY := msm8992 msm8994
-BR_FAMILY := msm8909 msm8916
-UM_3_18_FAMILY := msm8937 msm8953 msm8996
-UM_4_4_FAMILY := msm8998 sdm660
-UM_4_9_FAMILY := sdm845 sdm710
-UM_4_14_FAMILY := $(MSMNILE) $(MSMSTEPPE) $(TRINKET)
-UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
+include vendor/lluvia/config/BoardConfigQcomDefs.mk
 
 BOARD_USES_ADRENO := true
 
@@ -58,6 +43,7 @@ ifneq ($(filter $(UM_4_9_FAMILY) $(UM_4_14_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS += | (1 << 27)
 endif
 
+<<<<<<< HEAD
 # List of targets that use master side content protection
 MASTER_SIDE_CP_TARGET_LIST := msm8996 $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
 
@@ -92,6 +78,8 @@ ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
 QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
 endif
 
+=======
+>>>>>>> 052cbe7... vendor: Add back soong and build configuration for qcom platform
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/audio-caf/$(QCOM_HARDWARE_VARIANT) \
     hardware/qcom/display-caf/$(QCOM_HARDWARE_VARIANT) \
