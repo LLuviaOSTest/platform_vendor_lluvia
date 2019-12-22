@@ -28,6 +28,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/dictionaries
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/common
 
+# Lawnchair overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/lawnchair
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -73,6 +76,9 @@ PRODUCT_COPY_FILES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-elgoog.xml
+    vendor/lluvia/prebuilt/common/etc/sysconfig/yodita-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lluvia-power-whitelist.xml \
+    vendor/lluvia/prebuilt/common/etc/sysconfig/dialer_experience.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/dialer_experience.xml \
+    vendor/lluvia/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
