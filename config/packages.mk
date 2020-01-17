@@ -1,6 +1,10 @@
 # Required packages
 PRODUCT_PACKAGES += \
+    CalendarStorage \
     GalleryGoPrebuilt \
+    GoogleCalculator \
+    GoogleCalendar \
+    GoogleDeskClock \            
     LatinIMEGooglePrebuilt \
     Lawnchair \
     messaging \
