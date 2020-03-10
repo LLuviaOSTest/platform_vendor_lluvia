@@ -15,13 +15,13 @@
 # LLuviaOS versioning
 LLUVIA_VERSION = 5.0
 
-LLUVIA_MOD_VERSION := LLuviaOS-$(YODITA_VERSION)-$(shell date -u +%Y%m%d-%H%M)
+LLUVIA_MOD_VERSION := LLuviaOS-$(LLUVIA_VERSION)-$(shell date -u +%Y%m%d-%H%M)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.lluvia.version=$(LLUVIA_VERSION) \
   ro.modversion=$(LLUVIA_MOD_VERSION)
 
-YODITA_DISPLAY_VERSION := $(YODITA_VERSION)
+LLUVIA_DISPLAY_VERSION := $(LLUVIA_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.yodita.display.version=$(YODITA_DISPLAY_VERSION)
+  ro.lluvia.display.version=$(LLUVIA_DISPLAY_VERSION)
