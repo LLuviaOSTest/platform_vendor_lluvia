@@ -40,6 +40,9 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
+# Include LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/dictionaries
+
 # Packages
 include vendor/lluvia/config/packages.mk
 
