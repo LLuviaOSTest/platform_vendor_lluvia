@@ -22,5 +22,13 @@ PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/lluvia/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# Init file
+PRODUCT_COPY_FILES += \
+    vendor/lluvia/prebuilt/common/etc/init.local.rc:root/init.lluvia.rc
+
+# Don't export PS1 in /system/etc/mkshrc.
+PRODUCT_COPY_FILES += \
+    vendor/lluvia/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+
 # Packages
 include vendor/lluvia/config/packages.mk
