@@ -57,8 +57,8 @@ endif
 
 # Sysconfigs
 PRODUCT_COPY_FILES += \
-    vendor/lluvia/prebuilt/common/sysconfig/lluvia-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lluvia-power-whitelist.xml \
-    vendor/lluvia/prebuilt/common/sysconfig/dialer_experience.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/dialer_experience.xml
+    vendor/lluvia/prebuilt/common/etc/lluvia-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lluvia-power-whitelist.xml \
+    vendor/lluvia/prebuilt/common/etc/dialer_experience.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/dialer_experience.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
