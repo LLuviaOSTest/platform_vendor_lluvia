@@ -9,10 +9,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 
 # Include LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/yodita/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/dictionaries
 
 # Common overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/yodita/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/common
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -44,6 +44,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lluvia/config/permissions/lluvia-power-whitelist.xml:system/etc/sysconfig/lluvia-power-whitelist.xml
 
+# Google permissions
+PRODUCT_COPY_FILES += \
+    vendor/lluvia/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
@@ -66,3 +70,4 @@ include vendor/lluvia/config/packages.mk
 
 # Version
 include vendor/lluvia/config/version.mk
+
