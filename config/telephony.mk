@@ -1,6 +1,3 @@
-# Inherit common stuff
-$(call inherit-product, vendor/lluvia/config/common.mk)
-
 # World APN list
 PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/etc/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml
