@@ -42,11 +42,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
-# exFAT tools
-PRODUCT_PACKAGES += \
-    fsck.exfat \
-    mkfs.exfat
-
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
@@ -75,6 +70,9 @@ EXCLUDE_SYSTEMUI_TESTS := true
 
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/dictionaries
+
+# Common overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/lluvia/overlay/common
 
 # Packages
 include vendor/lluvia/config/packages.mk
