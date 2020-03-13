@@ -1,5 +1,6 @@
 # Required packages
 PRODUCT_PACKAGES += \
+    LatinIME \
     Launcher3QuickStep \
     messaging
 
