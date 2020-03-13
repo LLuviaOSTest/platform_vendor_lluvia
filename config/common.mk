@@ -72,3 +72,5 @@ include vendor/lluvia/config/packages.mk
 # Version
 include vendor/lluvia/config/version.mk
 
+# Props
+include vendor/lluvia/config/props.mk
