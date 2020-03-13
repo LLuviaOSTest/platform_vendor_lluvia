@@ -40,6 +40,10 @@ PRODUCT_COPY_FILES += \
     vendor/lluvia/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/lluvia/config/permissions/lluvia-power-whitelist.xml:system/etc/sysconfig/lluvia-power-whitelist.xml
+
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
