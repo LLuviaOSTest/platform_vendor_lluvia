@@ -101,3 +101,6 @@ include vendor/lluvia/config/props.mk
 
 # Telephony
 include vendor/lluvia/config/telephony.mk
+
+# Themes and overlays
+include vendor/themes/themes.mk
