@@ -43,45 +43,7 @@ ifneq ($(filter $(UM_4_9_FAMILY) $(UM_4_14_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS += | (1 << 27)
 endif
 
-<<<<<<< HEAD
-# List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996 $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
-
-ifeq ($(call is-board-platform-in-list, $(B_FAMILY)),true)
-    MSM_VIDC_TARGET_LIST := $(B_FAMILY)
-    QCOM_HARDWARE_VARIANT := msm8974
-else ifeq ($(call is-board-platform-in-list, $(B64_FAMILY)),true)
-    MSM_VIDC_TARGET_LIST := $(B64_FAMILY)
-    QCOM_HARDWARE_VARIANT := msm8994
-else ifeq ($(call is-board-platform-in-list, $(BR_FAMILY)),true)
-    MSM_VIDC_TARGET_LIST := $(BR_FAMILY)
-    QCOM_HARDWARE_VARIANT := msm8916
-else ifeq ($(call is-board-platform-in-list, $(UM_3_18_FAMILY)),true)
-    MSM_VIDC_TARGET_LIST := $(UM_3_18_FAMILY)
-    QCOM_HARDWARE_VARIANT := msm8996
-else ifeq ($(call is-board-platform-in-list, $(UM_4_4_FAMILY)),true)
-    MSM_VIDC_TARGET_LIST := $(UM_4_4_FAMILY)
-    QCOM_HARDWARE_VARIANT := msm8998
-else ifeq ($(call is-board-platform-in-list, $(UM_4_9_FAMILY)),true)
-    MSM_VIDC_TARGET_LIST := $(UM_4_9_FAMILY)
-    QCOM_HARDWARE_VARIANT := sdm845
-else ifneq ($(filter $(UM_4_14_FAMILY),$(TARGET_BOARD_PLATFORM)),)
-    MSM_VIDC_TARGET_LIST := $(UM_4_14_FAMILY)
-    QCOM_HARDWARE_VARIANT := sm8150
-else
-    MSM_VIDC_TARGET_LIST := $(TARGET_BOARD_PLATFORM)
-    QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
-endif
-
-# Allow a device to manually override which HALs it wants to use
-ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
-QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
-endif
-
-=======
->>>>>>> 052cbe7... vendor: Add back soong and build configuration for qcom platform
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/audio-caf/$(QCOM_HARDWARE_VARIANT) \
     hardware/qcom/display-caf/$(QCOM_HARDWARE_VARIANT) \
     hardware/qcom/media-caf/$(QCOM_HARDWARE_VARIANT)
-endif
