@@ -48,6 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # Copy all LLuvia specific init rc files
 $(foreach f,$(wildcard vendor/lluvia/prebuilt/common/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
