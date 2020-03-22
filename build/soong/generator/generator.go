@@ -29,7 +29,7 @@ import (
 )
 
 func init() {
-	android.RegisterModuleType("yodita_generator", GeneratorFactory)
+	android.RegisterModuleType("lluvia_generator", GeneratorFactory)
 
 	pctx.HostBinToolVariable("sboxCmd", "sbox")
 }
