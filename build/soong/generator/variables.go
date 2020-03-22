@@ -7,7 +7,7 @@ import (
 )
 
 func lluviaExpandVariables(ctx android.ModuleContext, in string) string {
-	lluviaVars := ctx.Config().VendorConfig("yoditaVarsPlugin")
+	lluviaVars := ctx.Config().VendorConfig("lluviaVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
 		if lluviaVars.IsSet(name) {

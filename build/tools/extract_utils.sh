@@ -69,7 +69,7 @@ function setup_vendor() {
         exit 1
     fi
 
-    export YODITA_ROOT="$3"
+    export LLUVIA_ROOT="$3"
     if [ ! -d "$LLUVIA_ROOT" ]; then
         echo "\$LLUVIA_ROOT must be set and valid before including this script!"
         exit 1
