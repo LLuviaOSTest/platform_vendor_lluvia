@@ -108,3 +108,6 @@ include vendor/lluvia/config/telephony.mk
 
 # Themes and overlays
 include vendor/themes/themes.mk
+
+#Include Our BoardConfig
+include vendor/lluvia/config/BoardConfigLLuvia.mk
